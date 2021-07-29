@@ -16,11 +16,17 @@
     <%= form.text_field :name %>
   </div>
 
+  <% @wine.id.present? %>
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.number_field :score %>
+  </div>
+
+  <div class="link">
+    <%= link_to_add_association 'add strain', form, :wine_strains %>
+  </div>
 
 
-<div class="link">
-  <%= link_to_add_association 'add strain', form, :wine_strains %>
-</div>
 
   <div class="actions">
     <%= form.submit %>

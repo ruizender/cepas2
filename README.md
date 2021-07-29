@@ -1,3 +1,3 @@
 # README
 
-Link to heroku: https://straineruiz.herokuapp.com/
+Link to heroku: https://winestrain2.herokuapp.com

@@ -9,7 +9,9 @@
 
         <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Show Oenology's List", oenologists_path, class:'btn btn-light mx-2 text-primary' %>
+          <% if current_user.admin?  %>
+            <%= link_to "Show Oenology's List", oenologists_path, class:'btn btn-light mx-2 text-primary' %>
+          <%end  %>
         </li>
           <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete , class:'btn btn-danger text-light ' %>
         </li>
