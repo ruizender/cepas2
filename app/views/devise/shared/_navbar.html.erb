@@ -1,14 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-      <a class="navbar-brand" href="<%=root_path%>"><i class="fab fa-earlybirds text-light fa-2x"></i></a> 
-      <h1 class="navbar h2 text-light font-weight-bolder">Wine Strain</h1>
+      <a class="navbar-brand" href="<%=root_path%>"><h1 class="navbar h2 text-light font-weight-bolder">Peter's Wine</h1></a> 
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse"           data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"  aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto"> 
+      <ul class="navbar-nav ml-auto">
+
         <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete , class:'btn btn-light text-primary ' %>
+          <%= link_to "Show Oenology's List", oenologists_path, class:'btn btn-light mx-2 text-primary' %>
+        </li>
+          <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete , class:'btn btn-danger text-light ' %>
         </li>
         <% else %>
         <li class="nav-item" >

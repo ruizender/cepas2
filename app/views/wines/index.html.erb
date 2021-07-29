@@ -6,6 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Strain</th>
+      <th>Score</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,6 +17,7 @@
       <tr>
         <td><%= wine.name%></td>
         <td><%=wine.strain_and_percent%></td>
+        <td><%=wine.score%></td>        
         <td><%= link_to 'Show', wine %></td>
         <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
         <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,9 +30,8 @@
 
 <% if current_user.admin? %>
   <div>
-  <%= link_to 'New Wine', new_wine_path %>
+  <%= link_to 'New Wine', new_wine_path, class:'btn btn-dark text-primary' %>
+  <%= link_to 'New Strain', new_strain_path, class:'btn btn-dark text-primary' %>
   </div>
-  <div>
-  <%= link_to 'New Strain', new_strain_path %>
-  </div>
+
 <% end %>
