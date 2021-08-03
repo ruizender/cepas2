@@ -1,4 +1,8 @@
 # README
 
 Link to heroku: https://winestrain2.herokuapp.com
-link
+
+usuario admin:
+
+Email: peter@gmail.com
+Password: 123456
